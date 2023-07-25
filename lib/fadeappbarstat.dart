@@ -31,8 +31,8 @@ class _FadeAppBarStatState extends State<FadeAppBarStat> {
     return Scaffold(
       backgroundColor: const Color(0xFF102A83),
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
             Align(
@@ -51,7 +51,6 @@ class _FadeAppBarStatState extends State<FadeAppBarStat> {
                       top: 225,
                     ),
                     child: Container(
-                      width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height,
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.vertical(
