@@ -106,8 +106,19 @@ class FadeAppBar extends StatelessWidget {
           vertical: 10.0,
           horizontal: 24.0,
         ),
-        color: Colors.white.withOpacity(
-          (scrollOffset / 50).clamp(0, 1).toDouble(),
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(
+                (scrollOffset / 50).clamp(0, 1).toDouble(),
+              ),
+              offset: const Offset(0.0, 1.0),
+              blurRadius: 1.0,
+            ),
+          ],
+          color: Colors.white.withOpacity(
+            (scrollOffset / 50).clamp(0, 1).toDouble(),
+          ),
         ),
         child: SafeArea(
           child: Container(
