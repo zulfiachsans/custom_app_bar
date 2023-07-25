@@ -39,7 +39,7 @@ class _FadeAppBarStatState extends State<FadeAppBarStat> {
               alignment: Alignment.topRight,
               child: Image.asset(
                 'images/background.png',
-                width: MediaQuery.of(context).size.width / 1.3,
+                width: MediaQuery.of(context).size.width / 1.35,
               ),
             ),
             CustomScrollView(
@@ -80,7 +80,9 @@ class _FadeAppBarStatState extends State<FadeAppBarStat> {
               ],
             ),
             PreferredSize(
-              child: FadeAppBar(scrollOffset: _scrollControllerOffset),
+              child: FadeAppBar(
+                scrollOffset: _scrollControllerOffset,
+              ),
               preferredSize: Size(MediaQuery.of(context).size.width, 100),
             ),
           ],
