@@ -39,37 +39,185 @@ class _FadeAppBarStatState extends State<FadeAppBarStat> {
               alignment: Alignment.topRight,
               child: Image.asset(
                 'images/background.png',
-                width: MediaQuery.of(context).size.width / 1.35,
+                width: MediaQuery.of(context).size.width / 1.3,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(
+                top: 155,
+                left: 23,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Teknik Informatika',
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w700,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'Senin, 24 Juli 2023',
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w200,
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
               ),
             ),
             CustomScrollView(
+              primary: false,
               controller: _scrollController,
               slivers: [
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                      top: 225,
+                      top: 230,
                     ),
                     child: Container(
+                      width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height,
                       decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.vertical(
-                          top: Radius.circular(20),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          topRight: Radius.circular(20.0),
                         ),
-                        color: Colors.white,
+                        color: Color(0xffffffff),
                       ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            width: 60,
-                            height: 10,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.grey.withOpacity(0.4),
+                          Center(
+                            child: Container(
+                              width: 60,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.grey.withOpacity(0.4),
+                              ),
                             ),
+                          ),
+                          const SizedBox(
+                            height: 40,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Column(
+                                children: [
+                                  Container(
+                                    width: 170,
+                                    height: 120,
+                                    decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
+                                      ),
+                                      color: Color(0xffF0F0F0),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                            top: 10,
+                                            left: 10,
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Container(
+                                                width: 10,
+                                                height: 10,
+                                                decoration: const BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                    Radius.circular(10),
+                                                  ),
+                                                  color: Colors.amber,
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                width: 10,
+                                              ),
+                                              const Text(
+                                                'IPK',
+                                                style: TextStyle(
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Colors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        const Text(
+                                          '3.75',
+                                          style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.black,
+                                            fontSize: 22,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 15,
+                                        ),
+                                        const Text(
+                                          'IPK Hampir sempurna',
+                                          style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    width: 170,
+                                    height: 120,
+                                    decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
+                                      ),
+                                      color: Color(0xffE5E9ED),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                width: 210,
+                                height: 250,
+                                decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(10),
+                                  ),
+                                  color: Color(0xffF0F0F0),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -125,6 +273,7 @@ class FadeAppBar extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 10),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,7 +293,7 @@ class FadeAppBar extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        'Hi, Zulfi Achsan Sani',
+                        '18.0504.0052',
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w300,
@@ -153,6 +302,25 @@ class FadeAppBar extends StatelessWidget {
                               : Colors.white,
                           fontSize: 14,
                         ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.notifications_sharp,
+                        color: scrollOffset > 50
+                            ? const Color(0xFF102A83)
+                            : Colors.white,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.help_center_outlined,
+                        color: scrollOffset > 50
+                            ? const Color(0xFF102A83)
+                            : Colors.white,
                       ),
                     ],
                   )
